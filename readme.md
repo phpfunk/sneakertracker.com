@@ -1,6 +1,6 @@
-This is a very simple web app that uses bootstrap, jquery, jqueryUI and basic JSON files to track miles for different running shoes. This was you can easily keep track of miles per pair.
-
 ![Screenshot](http://cl.ly/image/0n2w273I0D3R/Screen%20Shot%202013-03-17%20at%2010.11.51%20PM.png)
+
+This is a very simple web app that uses bootstrap, jquery, jqueryUI and basic JSON files to track miles for different running shoes. This was you can easily keep track of miles per pair.
 
 It is recommended to change your running shoes every 300 miles or so. I always had trouble remembering which run was in which shoes, so I decided to make this small local app.
 
