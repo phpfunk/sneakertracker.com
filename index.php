@@ -1,5 +1,14 @@
 <?php
 include 'shoes.php';
+$token = writeCookie();
+
+if (isset($_GET['token']) && ! empty($_GET['token'])) {
+    if (strlen($_GET['token']) == 50) {
+        $token = writeCookie($_GET['token']);
+        header('Location: /');
+        exit;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,10 +64,23 @@ include 'shoes.php';
         });
     });
     </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-39561557-1', 'sneakertracker.com');
+        ga('send', 'pageview');
+    </script>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row-fluid">
+            <h5>Your Key: <?php print $token; ?></h5>
+            <p>This is your account, no logins. If you clear your cookies, you can enter this key again to regain control by adding `?token=YOUR_TOKEN` to the URL above. So save it because I don't want to know who you are :).</p>
+
+            <p>Drag the following bookmarklet <a style="background-color: #f1f1f1; color: #666; padding: 3px; border: 1px solid #ccc;" href="javascript:window.location='http://<?php print $_SERVER['HTTP_HOST']; ?>?token=<?php print $token; ?>';">Log into Sneaker Keeper</a> to your bookmarks bar. When clicked it will log you in using the token above.</p>
             <div class="span3">
                 <fieldset>
                     <legend>Add Miles</legend>
