@@ -69,9 +69,12 @@ if (isset($_GET['token']) && ! empty($_GET['token'])) {
     <div class="container-fluid">
         <div class="row-fluid">
             <h5>Your Key: <?php print $token; ?></h5>
-            <p>This is your account, no logins. If you clear your cookies, you can enter this key again to regain control by adding `?token=YOUR_TOKEN` to the URL above. So save it because I don't want to know who you are :).</p>
 
             <p>Drag the following bookmarklet <a style="background-color: #f1f1f1; color: #666; padding: 3px; border: 1px solid #ccc;" href="javascript:window.location='http://<?php print $_SERVER['HTTP_HOST']; ?>?token=<?php print $token; ?>';">Log into Sneaker Keeper</a> to your bookmarks bar. When clicked it will log you in using the token above.</p>
+
+            <p>This is your account, no logins. So save it because I don't want to know who you are :).</p>
+
+            <p>If you are interested in the source for this project, you can find it here for <a href="https://github.com/phpfunk/sneakertracker.com" target="_blank">free</a>.</p>
             <div class="span3">
                 <fieldset>
                     <legend>Add Miles</legend>
