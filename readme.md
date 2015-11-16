@@ -1,6 +1,6 @@
 ![Screenshot](http://cl.ly/image/0n2w273I0D3R/Screen%20Shot%202013-03-17%20at%2010.11.51%20PM.png)
 
-You can either checkout the source below are just use the site, yep it live and free for you to use: [sneakertracker.com](http://sneakertracker.com).
+You can checkout the source below are just use the site.
 
 This is a very simple web app that uses bootstrap, jquery, jqueryUI and basic JSON files to track miles for different running shoes. This was you can easily keep track of miles per pair.
 
